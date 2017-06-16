@@ -1,0 +1,23 @@
+{% extends "app_base.html" %}
+{% block content %}
+{# include the first two lines above to extend the app_base template #}
+  <h3>Simple DB CRDU</h3> 
+  Now have {{ total_number }} Writers in database. 
+{# also make sure to include this very last line as well #}
+
+<b>Randomly</b>    <br/>
+<form action="/insert_data" method="POST">
+insert 100 new writer 
+<input type="submit" name='method' value='insert'><br>
+</form>
+<form action = '/delete_data' method="POST">
+    delete all unknown writer 
+<input type="submit" name='method' value='delete'><br>
+</form>
+<form action = '/update_data' method="POST">
+    update all writer's name as 'unknown'  
+<input type="submit" name='method' value='update'><br>
+    
+</form>
+{{message}}
+{% endblock %}

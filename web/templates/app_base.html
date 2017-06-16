@@ -1,0 +1,17 @@
+{# base template that other templates can build from. Specifies the title for the
+page and a navigation bar at the top
+see http://jinja.pocoo.org/docs/templates/#template-inheritance for more information #}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>AuctionBase</title>
+</head>
+<body>
+  
+  {# specify content block so that other templates can use this template as a base #}
+  <div id="content"><center>{% block content %}{% endblock %}</center></div>
+</body>
+</html>
